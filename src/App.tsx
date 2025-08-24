@@ -32,8 +32,8 @@ import {
 
 type AppPage = 'home' | 'catalog' | 'recipes' | 'heritage' | 'subscriptions' | 'gifts' | 'concierge' | 'checkout' | 'dashboard';
 
-export default function App() {
-  const [currentPage, setCurrentPage] = useState<AppPage>('home');
+// HomePage Component
+function HomePage({ onNavigate }: { onNavigate: (page: AppPage) => void }) {
   const [isVisible, setIsVisible] = useState(false);
   const controls = useAnimation();
   const { addItem } = useCart();
@@ -63,7 +63,7 @@ export default function App() {
   const heritageStories = [
     {
       title: "Ancient Spice Routes",
-      description: "Discover the millennium-old trading paths that brought Ethiopian spices to the world.",
+      description: "Discover the millennium-old trading paths that brought Ethiopian and Eritrean spices to the world.",
       icon: Globe,
       accent: "text-saffron"
     },
@@ -75,34 +75,14 @@ export default function App() {
     },
     {
       title: "Sacred Blends",
-      description: "Experience berbere recipes passed down through Ethiopian royal courts.",
+      description: "Experience berbere recipes passed down through Ethiopian and Eritrean royal courts.",
       icon: Crown,
       accent: "text-burgundy"
     }
   ];
 
-  const renderCurrentPage = () => {
-    switch (currentPage) {
-      case 'catalog':
-        return <ProductCatalog />;
-      case 'recipes':
-        return <RecipeHub onBackToHub={() => setCurrentPage('home')} />;
-      case 'heritage':
-        return <CulturalHeritage />;
-      case 'subscriptions':
-        return <SubscriptionService />;
-      case 'gifts':
-        return <GiftCenter />;
-      case 'concierge':
-        return <ConciergeService />;
-      case 'checkout':
-        return <Checkout onBack={() => setCurrentPage('home')} onComplete={() => setCurrentPage('home')} />;
-      case 'dashboard':
-        return <UserDashboard />;
-      default:
-        return (
-          <div className="min-h-screen bg-background">
-      
+  return (
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
@@ -183,7 +163,7 @@ export default function App() {
               <Button 
                 size="lg" 
                 className="bg-spice-sunset hover:bg-heritage-blend text-white px-8 py-4 text-lg font-medium luxury-shadow group"
-                onClick={() => setCurrentPage('catalog')}
+                onClick={() => onNavigate('catalog')}
               >
                 <ShoppingCart className="w-5 h-5 mr-2" />
                 Explore Collection
@@ -194,7 +174,7 @@ export default function App() {
                 variant="outline" 
                 size="lg" 
                 className="border-2 border-burgundy text-burgundy hover:bg-burgundy hover:text-white px-8 py-4 text-lg font-medium transition-luxury"
-                onClick={() => setCurrentPage('subscriptions')}
+                onClick={() => onNavigate('subscriptions')}
               >
                 <Crown className="w-5 h-5 mr-2" />
                 VIP Membership
@@ -355,62 +335,85 @@ export default function App() {
         </div>
       </section>
       
-            {/* Product Catalog Section */}
-            <section id="catalog" className="py-20 bg-background">
-              <ProductCatalog />
-            </section>
+      {/* CTA Section */}
+      <section className="py-20 bg-heritage-blend relative overflow-hidden">
+        <div className="absolute inset-0 pattern-traditional opacity-10" />
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <h2 className="font-luxury text-luxury-lg text-white mb-6">
+              Begin Your Culinary Journey
+            </h2>
             
-            {/* CTA Section */}
-            <section className="py-20 bg-heritage-blend relative overflow-hidden">
-              <div className="absolute inset-0 pattern-traditional opacity-10" />
-              <div className="container mx-auto px-4 text-center relative z-10">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                  className="max-w-3xl mx-auto"
-                >
-                  <h2 className="font-luxury text-luxury-lg text-white mb-6">
-                    Begin Your Culinary Journey
-                  </h2>
-                  
-                  <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                    Join thousands of culinary enthusiasts who trust us to deliver
-                    the finest Ethiopian and Eritrean spices to their kitchens worldwide.
-                  </p>
-                  
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button 
-                      size="lg" 
-                      className="bg-golden hover:bg-copper text-charcoal px-8 py-4 text-lg font-medium"
-                      onClick={() => setCurrentPage('catalog')}
-                    >
-                      <Sparkles className="w-5 h-5 mr-2" />
-                      Start Shopping
-                    </Button>
-                    
-                    <Button 
-                      variant="outline" 
-                      size="lg" 
-                      className="border-2 border-white text-white hover:bg-white hover:text-charcoal px-8 py-4 text-lg font-medium"
-                      onClick={() => setCurrentPage('recipes')}
-                    >
-                      <Coffee className="w-5 h-5 mr-2" />
-                      Explore Recipes
-                    </Button>
-                  </div>
-                </motion.div>
-              </div>
-            </section>
-          </div>
-        );
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              Join thousands of culinary enthusiasts who trust us to deliver
+              the finest Ethiopian and Eritrean spices to their kitchens worldwide.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-golden hover:bg-copper text-charcoal px-8 py-4 text-lg font-medium"
+                onClick={() => onNavigate('catalog')}
+              >
+                <Sparkles className="w-5 h-5 mr-2" />
+                Start Shopping
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-2 border-white text-white hover:bg-white hover:text-charcoal px-8 py-4 text-lg font-medium"
+                onClick={() => onNavigate('recipes')}
+              >
+                <Coffee className="w-5 h-5 mr-2" />
+                Explore Recipes
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default function App() {
+  const [currentPage, setCurrentPage] = useState<AppPage>('home');
+
+  const renderCurrentPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return <HomePage onNavigate={setCurrentPage} />;
+      case 'catalog':
+        return <ProductCatalog />;
+      case 'recipes':
+        return <RecipeHub onBackToHub={() => setCurrentPage('home')} />;
+      case 'heritage':
+        return <CulturalHeritage />;
+      case 'subscriptions':
+        return <SubscriptionService />;
+      case 'gifts':
+        return <GiftCenter />;
+      case 'concierge':
+        return <ConciergeService />;
+      case 'checkout':
+        return <Checkout onBack={() => setCurrentPage('home')} onComplete={() => setCurrentPage('home')} />;
+      case 'dashboard':
+        return <UserDashboard />;
+      default:
+        return <HomePage onNavigate={setCurrentPage} />;
     }
   };
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
+      <div className='pt-16'></div>
       {renderCurrentPage()}
       <ShoppingCartComponent onCheckout={() => setCurrentPage('checkout')} />
     </div>

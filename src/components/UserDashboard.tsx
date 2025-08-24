@@ -50,7 +50,7 @@ export default function UserDashboard() {
 
   // Mock user data
   const userData = {
-    name: 'Sarah Johnson',
+    name: 'Selihom Kidane',
     email: 'sarah@example.com',
     memberSince: '2023',
     tier: 'Heritage Connoisseur',
