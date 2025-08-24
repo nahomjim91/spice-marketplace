@@ -1,0 +1,70 @@
+import { motion } from 'framer-motion';
+
+interface LogoProps {
+  className?: string;
+  size?: 'sm' | 'md' | 'lg';
+}
+
+export default function Logo({ className = '', size = 'md' }: LogoProps) {
+  const sizeClasses = {
+    sm: 'w-6 h-6',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+  return (
+    <motion.div 
+      className={`${sizeClasses[size]} ${className}`}
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+    >
+      <svg
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+      >
+        {/* Background Circle */}
+        <circle
+          cx="16"
+          cy="16"
+          r="16"
+          fill="url(#gradient)"
+        />
+        
+        {/* Stylized B for Berbere */}
+        <path
+          d="M10 8h6c3 0 5 1.5 5 4s-1 3.5-2.5 4c2 0.5 3.5 2 3.5 4.5c0 3-2.5 4.5-5.5 4.5H10V8z"
+          fill="white"
+          fillOpacity="0.95"
+        />
+        
+        {/* Inner details */}
+        <path
+          d="M13 11v3.5h3c1 0 1.8-0.5 1.8-1.8s-0.8-1.7-1.8-1.7h-3z"
+          fill="url(#gradient)"
+        />
+        
+        <path
+          d="M13 17.5v3.5h3.5c1.2 0 2-0.6 2-1.8s-0.8-1.7-2-1.7H13z"
+          fill="url(#gradient)"
+        />
+        
+        {/* Spice dots pattern */}
+        <circle cx="23" cy="9" r="1.5" fill="#FFD700" fillOpacity="0.8" />
+        <circle cx="26" cy="12" r="1" fill="#FF8C42" fillOpacity="0.7" />
+        <circle cx="25" cy="20" r="1.2" fill="#DC143C" fillOpacity="0.8" />
+        <circle cx="7" cy="23" r="1" fill="#228B22" fillOpacity="0.7" />
+        
+        {/* Gradient Definition */}
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#800020" />
+            <stop offset="50%" stopColor="#FF8C42" />
+            <stop offset="100%" stopColor="#D2691E" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </motion.div>
+  );
+}
