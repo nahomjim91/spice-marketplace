@@ -179,16 +179,20 @@ export default function UserDashboard() {
           <div className="max-w-6xl mx-auto">
             <Tabs value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="grid w-full grid-cols-4 mb-8 bg-warm-beige/30 h-12">
-                <TabsTrigger value="overview" className="data-[state=active]:bg-saffron data-[state=active]:text-white">
+                <TabsTrigger value="overview"     className="data-[state=active]:bg-saffron data-[state=active]:text-burgundy data-[state=active]:dark:text-white text-charcoal dark:text-ivory"
+>
                   Overview
                 </TabsTrigger>
-                <TabsTrigger value="orders" className="data-[state=active]:bg-saffron data-[state=active]:text-white">
+                <TabsTrigger value="orders"     className="data-[state=active]:bg-saffron data-[state=active]:text-burgundy data-[state=active]:dark:text-white text-charcoal dark:text-ivory"
+>
                   Orders
                 </TabsTrigger>
-                <TabsTrigger value="subscription" className="data-[state=active]:bg-saffron data-[state=active]:text-white">
+                <TabsTrigger value="subscription"     className="data-[state=active]:bg-saffron data-[state=active]:text-burgundy data-[state=active]:dark:text-white text-charcoal dark:text-ivory"
+>
                   Subscription
                 </TabsTrigger>
-                <TabsTrigger value="wishlist" className="data-[state=active]:bg-saffron data-[state=active]:text-white">
+                <TabsTrigger value="wishlist"     className="data-[state=active]:bg-saffron data-[state=active]:text-burgundy data-[state=active]:dark:text-white text-charcoal dark:text-ivory"
+>
                   Wishlist
                 </TabsTrigger>
               </TabsList>

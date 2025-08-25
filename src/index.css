@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -13,7 +13,8 @@
   --radius-xl: calc(var(--radius) + 4px);
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", ui-serif, Georgia, serif;
-  --font-luxury: "Cormorant Garamond", "Playfair Display", ui-serif, Georgia, serif;
+  --font-luxury: "Cormorant Garamond", "Playfair Display", ui-serif, Georgia,
+    serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -49,20 +50,20 @@
 
 :root {
   --radius: 1rem;
-  
+
   /* Ethiopian/Eritrean Heritage Color Palette */
   --saffron: oklch(0.73 0.15 50); /* Deep Saffron #FF8C42 */
   --burgundy: oklch(0.35 0.12 10); /* Rich Burgundy #800020 */
   --golden: oklch(0.88 0.12 85); /* Golden Yellow #FFD700 */
   --cinnamon: oklch(0.65 0.12 45); /* Warm Cinnamon #D2691E */
   --ethiopian-green: oklch(0.55 0.15 135); /* Ethiopian Green #228B22 */
-  --traditional-red: oklch(0.55 0.20 25); /* Traditional Red #DC143C */
+  --traditional-red: oklch(0.55 0.2 25); /* Traditional Red #DC143C */
   --ivory: oklch(0.98 0.02 80); /* Ivory Cream #FFF8DC */
   --warm-beige: oklch(0.95 0.03 85); /* Warm Beige #F5F5DC */
   --charcoal: oklch(0.25 0 0); /* Charcoal #2F2F2F */
   --rose-gold: oklch(0.65 0.08 20); /* Rose Gold #B76E79 */
-  --copper: oklch(0.60 0.10 40); /* Copper #B87333 */
-  
+  --copper: oklch(0.6 0.1 40); /* Copper #B87333 */
+
   /* Core System Colors */
   --background: var(--ivory);
   --foreground: var(--charcoal);
@@ -75,27 +76,27 @@
   --secondary: var(--warm-beige);
   --secondary-foreground: var(--charcoal);
   --muted: var(--warm-beige);
-  --muted-foreground: oklch(0.50 0 0);
+  --muted-foreground: oklch(0.5 0 0);
   --accent: var(--golden);
   --accent-foreground: var(--charcoal);
   --destructive: var(--traditional-red);
-  --border: oklch(0.90 0.02 80);
+  --border: oklch(0.9 0.02 80);
   --input: oklch(0.95 0.02 80);
   --ring: var(--saffron);
-  
+
   /* Heritage Colors for Components */
   --heritage-primary: var(--burgundy);
   --heritage-secondary: var(--ethiopian-green);
   --luxury-accent: var(--rose-gold);
   --warm-accent: var(--copper);
-  
+
   /* Chart Colors Using Heritage Palette */
   --chart-1: var(--saffron);
   --chart-2: var(--burgundy);
   --chart-3: var(--ethiopian-green);
   --chart-4: var(--golden);
   --chart-5: var(--cinnamon);
-  
+
   /* Sidebar Colors */
   --sidebar: oklch(0.98 0.01 80);
   --sidebar-foreground: var(--charcoal);
@@ -123,7 +124,7 @@
   --accent: var(--rose-gold);
   --accent-foreground: var(--ivory);
   --destructive: var(--traditional-red);
-  --border: oklch(0.30 0.02 240);
+  --border: oklch(0.3 0.02 240);
   --input: oklch(0.22 0.02 240);
   --ring: var(--golden);
   --chart-1: var(--golden);
@@ -137,7 +138,7 @@
   --sidebar-primary-foreground: oklch(1 0 0);
   --sidebar-accent: oklch(0.25 0.02 240);
   --sidebar-accent-foreground: var(--ivory);
-  --sidebar-border: oklch(0.30 0.02 240);
+  --sidebar-border: oklch(0.3 0.02 240);
   --sidebar-ring: var(--golden);
 }
 
@@ -155,131 +156,199 @@
   .bg-spice-sunset {
     background: linear-gradient(135deg, var(--saffron), var(--golden));
   }
-  
+
   .bg-heritage-blend {
-    background: linear-gradient(135deg, var(--burgundy), var(--ethiopian-green));
+    background: linear-gradient(
+      135deg,
+      var(--burgundy),
+      var(--ethiopian-green)
+    );
   }
-  
+
   .bg-warm-spice {
     background: linear-gradient(135deg, var(--cinnamon), var(--copper));
   }
-  
+
   .bg-luxury-gold {
     background: linear-gradient(135deg, var(--golden), var(--rose-gold));
   }
-  
+
   /* Text Gradients */
   .text-spice-gradient {
     @apply bg-gradient-to-r from-[var(--saffron)] via-[var(--golden)] to-[var(--cinnamon)] bg-clip-text text-transparent;
   }
-  
+
   .text-heritage-gradient {
     @apply bg-gradient-to-r from-[var(--burgundy)] via-[var(--traditional-red)] to-[var(--ethiopian-green)] bg-clip-text text-transparent;
   }
-  
+
   /* Luxury Effects */
   .luxury-shadow {
-    box-shadow: 0 25px 50px -12px rgb(from var(--saffron) r g b / 0.25), 
-                0 8px 16px -8px rgb(from var(--burgundy) r g b / 0.1);
+    box-shadow: 0 25px 50px -12px rgb(from var(--saffron) r g b / 0.25),
+      0 8px 16px -8px rgb(from var(--burgundy) r g b / 0.1);
   }
-  
+
   .spice-glow {
     box-shadow: 0 0 30px rgb(from var(--saffron) r g b / 0.3),
-                0 0 60px rgb(from var(--golden) r g b / 0.1);
+      0 0 60px rgb(from var(--golden) r g b / 0.1);
   }
-  
+
   /* Ethiopian Pattern Background */
   .pattern-traditional {
-    background-image: radial-gradient(circle at 2px 2px, rgb(from var(--golden) r g b / 0.1) 1px, transparent 0);
+    background-image: radial-gradient(
+      circle at 2px 2px,
+      rgb(from var(--golden) r g b / 0.1) 1px,
+      transparent 0
+    );
     background-size: 20px 20px;
   }
-  
+
   /* Spice Particle Animation */
   @keyframes spice-float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+    }
   }
-  
+
   .animate-spice-float {
     animation: spice-float 6s ease-in-out infinite;
   }
-  
+
   /* Heritage Color Classes */
-  .text-saffron { color: var(--saffron); }
-  .text-burgundy { color: var(--burgundy); }
-  .text-golden { color: var(--golden); }
-  .text-cinnamon { color: var(--cinnamon); }
-  .text-ethiopian-green { color: var(--ethiopian-green); }
-  .text-traditional-red { color: var(--traditional-red); }
-  .text-rose-gold { color: var(--rose-gold); }
-  .text-copper { color: var(--copper); }
-  
-  .bg-saffron { background-color: var(--saffron); }
-  .bg-burgundy { background-color: var(--burgundy); }
-  .bg-golden { background-color: var(--golden); }
-  .bg-cinnamon { background-color: var(--cinnamon); }
-  .bg-ethiopian-green { background-color: var(--ethiopian-green); }
-  .bg-traditional-red { background-color: var(--traditional-red); }
-  .bg-rose-gold { background-color: var(--rose-gold); }
-  .bg-copper { background-color: var(--copper); }
-  
+  .text-saffron {
+    color: var(--saffron);
+  }
+  .text-burgundy {
+    color: var(--burgundy);
+  }
+  .text-golden {
+    color: var(--golden);
+  }
+  .text-cinnamon {
+    color: var(--cinnamon);
+  }
+  .text-ethiopian-green {
+    color: var(--ethiopian-green);
+  }
+  .text-traditional-red {
+    color: var(--traditional-red);
+  }
+  .text-rose-gold {
+    color: var(--rose-gold);
+  }
+  .text-copper {
+    color: var(--copper);
+  }
+
+  .bg-saffron {
+    background-color: var(--saffron);
+  }
+  .bg-burgundy {
+    background-color: var(--burgundy);
+  }
+  .bg-golden {
+    background-color: var(--golden);
+  }
+  .bg-cinnamon {
+    background-color: var(--cinnamon);
+  }
+  .bg-ethiopian-green {
+    background-color: var(--ethiopian-green);
+  }
+  .bg-traditional-red {
+    background-color: var(--traditional-red);
+  }
+  .bg-rose-gold {
+    background-color: var(--rose-gold);
+  }
+  .bg-copper {
+    background-color: var(--copper);
+  }
+
   /* Border Colors */
-  .border-saffron { border-color: var(--saffron); }
-  .border-burgundy { border-color: var(--burgundy); }
-  .border-golden { border-color: var(--golden); }
-  .border-rose-gold { border-color: var(--rose-gold); }
-  
+  .border-saffron {
+    border-color: var(--saffron);
+  }
+  .border-burgundy {
+    border-color: var(--burgundy);
+  }
+  .border-golden {
+    border-color: var(--golden);
+  }
+  .border-rose-gold {
+    border-color: var(--rose-gold);
+  }
+
   /* Premium Typography */
   .font-luxury {
     font-family: var(--font-serif);
     font-weight: 400;
     letter-spacing: -0.02em;
   }
-  
+
   .text-luxury-xl {
     font-size: clamp(3rem, 8vw, 8rem);
     line-height: 0.9;
   }
-  
+
   .text-luxury-lg {
     font-size: clamp(2rem, 5vw, 4rem);
     line-height: 1.1;
   }
-  
+
   /* Smooth Interactions */
   .transition-luxury {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   /* Glass Morphism for Luxury Feel */
   .glass-luxury {
     background: rgb(from var(--ivory) r g b / 0.8);
     backdrop-filter: blur(12px);
     border: 1px solid rgb(from var(--golden) r g b / 0.2);
   }
-  
+
   .dark .glass-luxury {
     background: rgb(from oklch(0.15 0.02 240) r g b / 0.8);
     backdrop-filter: blur(12px);
     border: 1px solid rgb(from var(--golden) r g b / 0.3);
   }
-  
+
   /* Dark mode specific enhancements */
   .dark .luxury-shadow {
-    box-shadow: 0 10px 25px rgb(from oklch(0.08 0.02 240) r g b / 0.3), 0 4px 10px rgb(from oklch(0.05 0.02 240) r g b / 0.2);
+    box-shadow: 0 10px 25px rgb(from oklch(0.08 0.02 240) r g b / 0.3),
+      0 4px 10px rgb(from oklch(0.05 0.02 240) r g b / 0.2);
   }
-  
+
   .dark .spice-glow {
-    box-shadow: 0 0 30px rgb(from var(--saffron) r g b / 0.2), 0 10px 25px rgb(from oklch(0.05 0.02 240) r g b / 0.3);
+    box-shadow: 0 0 30px rgb(from var(--saffron) r g b / 0.2),
+      0 10px 25px rgb(from oklch(0.05 0.02 240) r g b / 0.3);
   }
-  
+
   .dark .bg-warm-beige\/30 {
-    background: oklch(0.20 0.02 240) !important;
+    background: oklch(0.2 0.02 240) !important;
   }
-  
+
   .dark .bg-heritage-blend {
-    background: linear-gradient(135deg, var(--burgundy) 0%, var(--saffron) 100%) !important;
+    background: linear-gradient(
+      135deg,
+      var(--burgundy) 0%,
+      var(--saffron) 100%
+    ) !important;
   }
+}
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 /* Mobile Optimizations */
@@ -287,11 +356,11 @@
   .spice-float {
     animation-duration: 4s; /* Slower on mobile */
   }
-  
+
   .glass-luxury {
     backdrop-filter: blur(8px); /* Less blur on mobile for performance */
   }
-  
+
   .pattern-traditional {
     opacity: 0.3; /* Reduce pattern opacity on mobile */
   }
@@ -302,7 +371,7 @@
   .spice-float {
     animation: none;
   }
-  
+
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

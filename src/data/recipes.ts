@@ -138,6 +138,68 @@ export const recipes: Recipe[] = [
     reviews: 127
   },
   {
+   id: 'zigni-beef',
+    name: 'Zigni',
+    nameAmharic: 'ዝግኒ', // Using Tigrinya script
+    type: 'traditional',
+    category: 'meat',
+    difficulty: 'intermediate',
+    cookTime: 120,
+    prepTime: 30,
+    servings: 6,
+    description: 'Eritrea\'s signature spicy beef stew, slow-cooked with berbere and aromatic spices until tender and richly flavored.',
+    culturalContext: 'Zigni is the heart of Eritrean cuisine, served at weddings, holidays, and family gatherings. It represents the bold flavors and communal dining traditions of Eritrean culture.',
+    region: 'Highlands of Eritrea',
+    featuredSpices: ['eritrean-berbere', 'korarima'],
+    ingredients: [
+      { item: 'Beef chuck or shoulder', amount: '3 lbs', notes: 'Cut into 2-inch cubes', spiceProduct: '' },
+      { item: 'Eritrean Berbere', amount: '4-5 tablespoons', notes: 'Adjust for heat preference', spiceProduct: 'eritrean-berbere' },
+      { item: 'Red onions', amount: '4 large', notes: 'Finely chopped' },
+      { item: 'Garlic cloves', amount: '8', notes: 'Minced' },
+      { item: 'Fresh ginger', amount: '2 inches', notes: 'Minced' },
+      { item: 'Tomato paste', amount: '3 tablespoons' },
+      { item: 'Clarified butter (tesmi)', amount: '1/2 cup', notes: 'Traditional Eritrean butter' },
+      { item: 'Beef stock', amount: '3 cups' },
+      { item: 'Korarima', amount: '1 teaspoon', notes: 'Freshly ground', spiceProduct: 'korarima' },
+      { item: 'Salt and black pepper', amount: 'To taste' }
+    ],
+    instructions: [
+      { step: 1, action: 'Brown beef cubes in tesmi until well-seared on all sides. Remove and set aside.', timeEstimate: '15 min', technique: 'High heat searing for flavor' },
+      { step: 2, action: 'Sauté onions in same pot until golden and caramelized, about 20 minutes.', timeEstimate: '20 min' },
+      { step: 3, action: 'Add berbere and cook for 2-3 minutes, stirring constantly to prevent burning.', timeEstimate: '3 min', tips: 'Blooming spices releases essential oils' },
+      { step: 4, action: 'Add garlic, ginger, and tomato paste. Cook for 5 minutes until fragrant.', timeEstimate: '5 min' },
+      { step: 5, action: 'Return beef to pot and add stock. Bring to boil, then reduce to gentle simmer.', timeEstimate: '5 min' },
+      { step: 6, action: 'Cover and simmer for 1.5-2 hours until beef is fork-tender.', timeEstimate: '120 min' },
+      { step: 7, action: 'Stir in korarima and season with salt and pepper. Simmer uncovered for 10 minutes to thicken.', timeEstimate: '10 min' }
+    ],
+    tips: [
+      'Traditional tesmi (clarified butter) gives authentic flavor',
+      'Low, slow cooking ensures tender meat',
+      'Adjust berbere gradually to control heat level',
+      'Serve with injera or Eritrean flatbread (taita)'
+    ],
+    variations: [
+      'Zigni derho - Made with chicken instead of beef',
+      'Vegetarian zigni - Using mushrooms and root vegetables',
+      'Mild zigni - Reduced berbere for sensitive palates'
+    ],
+    nutritionalBenefits: [
+      'High protein from tender beef',
+      'Iron and B-vitamins for energy',
+      'Berbere spices aid digestion and provide antioxidants',
+      'Slow cooking preserves nutrients'
+    ],
+    images: ['zigni-1.jpg', 'zigni-cooking.jpg'],
+    difficulty_description: 'Requires patience for slow cooking and skill in balancing complex spices',
+    traditional_significance: 'Central dish in Eritrean celebrations, representing hospitality and abundance',
+    modern_adaptations: ['Pressure cooker version', 'Slow cooker preparation', 'Meal prep portions'],
+    pairing_suggestions: ['Injera bread', 'Eritrean honey wine', 'Spiced tea', 'Traditional cheese'],
+    featured: true,
+    rating: 4.8,
+    reviews: 94
+  },
+
+  {
     id: 'shiro-wat',
     name: 'Shiro Wat',
     nameAmharic: 'ሽሮ ወጥ',
@@ -197,6 +259,64 @@ export const recipes: Recipe[] = [
     rating: 4.8,
     reviews: 89
   },
+  {
+    id: 'taita-flatbread',
+    name: 'Taita (Eritrean Flatbread)',
+    nameAmharic: 'ታይታ',
+    type: 'traditional',
+    category: 'condiments',
+    difficulty: 'intermediate',
+    cookTime: 30,
+    prepTime: 20,
+    servings: 8,
+    description: 'Traditional Eritrean flatbread with a slightly crispy exterior and soft interior, perfect for scooping stews and sauces.',
+    culturalContext: 'Taita is the Eritrean equivalent to injera but with its own unique texture and preparation method. It serves as both bread and utensil in traditional dining.',
+    region: 'Lowlands and Coastal Eritrea',
+    featuredSpices: ['eritrean-teff', 'barley-flour'],
+    ingredients: [
+      { item: 'Teff flour', amount: '2 cups', spiceProduct: 'eritrean-teff' },
+      { item: 'Barley flour', amount: '1 cup', spiceProduct: 'barley-flour' },
+      { item: 'Warm water', amount: '2.5 cups' },
+      { item: 'Active dry yeast', amount: '1 teaspoon' },
+      { item: 'Salt', amount: '1 teaspoon' },
+      { item: 'Olive oil', amount: '2 tablespoons' }
+    ],
+    instructions: [
+      { step: 1, action: 'Mix flours and salt in large bowl. Create well in center.', timeEstimate: '2 min' },
+      { step: 2, action: 'Dissolve yeast in warm water, let foam for 5 minutes.', timeEstimate: '5 min' },
+      { step: 3, action: 'Pour yeast mixture and oil into flour well. Mix until smooth batter forms.', timeEstimate: '5 min' },
+      { step: 4, action: 'Cover and let rest for 30 minutes until slightly bubbly.', timeEstimate: '30 min' },
+      { step: 5, action: 'Heat clay or heavy skillet over medium heat until very hot.', technique: 'Traditional clay pan preferred' },
+      { step: 6, action: 'Pour batter to form thin, round flatbread. Cook until surface sets and edges lift.', timeEstimate: '3-4 min per bread' },
+      { step: 7, action: 'Stack finished breads and cover with clean towel to keep soft.', tips: 'Steam keeps bread pliable' }
+    ],
+    tips: [
+      'Consistency should be like thick pancake batter',
+      'Traditional clay cooking surface gives best results',
+      'Don\'t flip - cook only one side like injera',
+      'Serve warm for best texture and flavor'
+    ],
+    variations: [
+      'Whole grain taita - Using 100% teff flour',
+      'Sweet taita - Adding honey for festive occasions',
+      'Herb taita - Incorporating fresh herbs into batter'
+    ],
+    nutritionalBenefits: [
+      'Complete protein from teff grain',
+      'High in fiber and minerals',
+      'Naturally gluten-free option',
+      'Complex carbohydrates for sustained energy'
+    ],
+    images: ['taita-1.jpg', 'taita-making.jpg'],
+    difficulty_description: 'Requires proper batter consistency and heat control for optimal results',
+    traditional_significance: 'Essential component of Eritrean meals, representing sustenance and tradition',
+    modern_adaptations: ['Non-stick pan method', 'Electric griddle version', 'Make-ahead and freeze options'],
+    pairing_suggestions: ['All Eritrean stews', 'Spiced vegetables', 'Traditional honey', 'Cheese and herbs'],
+    featured: true,
+    rating: 4.5,
+    reviews: 67
+  },
+
   {
     id: 'berbere-spice-blend',
     name: 'Homemade Berbere Spice Blend',
@@ -263,6 +383,7 @@ export const recipes: Recipe[] = [
     rating: 4.9,
     reviews: 156
   },
+
   {
     id: 'kitfo',
     name: 'Kitfo',
@@ -319,6 +440,123 @@ export const recipes: Recipe[] = [
     rating: 4.7,
     reviews: 43
   },
+    {
+    id: 'hamli-spinach',
+    name: 'Hamli (Eritrean Spinach)',
+    nameAmharic: 'ሓምሊ',
+    type: 'traditional',
+    category: 'vegetarian',
+    difficulty: 'beginner',
+    cookTime: 25,
+    prepTime: 10,
+    servings: 4,
+    description: 'Simple yet flavorful spinach dish cooked with onions, garlic, and aromatic spices, a staple of Eritrean vegetarian cuisine.',
+    culturalContext: 'Hamli represents the Eritrean tradition of creating delicious, nutritious dishes from simple ingredients, often prepared during fasting periods.',
+    region: 'Throughout Eritrea',
+    featuredSpices: ['mild-berbere', 'korarima'],
+    ingredients: [
+      { item: 'Fresh spinach', amount: '2 lbs', notes: 'Washed and chopped' },
+      { item: 'Red onions', amount: '2 medium', notes: 'Finely chopped' },
+      { item: 'Garlic cloves', amount: '4', notes: 'Minced' },
+      { item: 'Mild berbere', amount: '1 tablespoon', spiceProduct: 'mild-berbere' },
+      { item: 'Korarima', amount: '1/2 teaspoon', notes: 'Ground', spiceProduct: 'korarima' },
+      { item: 'Olive oil', amount: '3 tablespoons' },
+      { item: 'Tomatoes', amount: '2 medium', notes: 'Diced' },
+      { item: 'Salt', amount: 'To taste' }
+    ],
+    instructions: [
+      { step: 1, action: 'Sauté onions in olive oil until softened and translucent, about 8 minutes.', timeEstimate: '8 min' },
+      { step: 2, action: 'Add garlic and cook for 1 minute until fragrant.', timeEstimate: '1 min' },
+      { step: 3, action: 'Stir in berbere and korarima, cook for 30 seconds.', timeEstimate: '30 sec' },
+      { step: 4, action: 'Add diced tomatoes and cook until they start to break down, 5 minutes.', timeEstimate: '5 min' },
+      { step: 5, action: 'Add spinach in batches, stirring until wilted.', timeEstimate: '5 min' },
+      { step: 6, action: 'Cover and cook for 10 minutes until spinach is tender.', timeEstimate: '10 min' },
+      { step: 7, action: 'Season with salt and cook uncovered for 2 minutes to reduce excess liquid.', timeEstimate: '2 min' }
+    ],
+    tips: [
+      'Don\'t overcook - spinach should retain some texture',
+      'Drain excess liquid for better consistency',
+      'Fresh spinach works better than frozen',
+      'Adjust berbere to taste preference'
+    ],
+    variations: [
+      'Hamli with cheese - Add fresh cheese in final minutes',
+      'Spicy hamli - Extra berbere and fresh chilies',
+      'Mixed greens - Combine with other leafy vegetables'
+    ],
+    nutritionalBenefits: [
+      'Excellent source of iron and vitamins A, C, K',
+      'High in folate and antioxidants',
+      'Low calorie, nutrient-dense vegetable',
+      'Berbere spices aid nutrient absorption'
+    ],
+    images: ['hamli-1.jpg', 'spinach-cooking.jpg'],
+    difficulty_description: 'Simple preparation focusing on proper timing and spice balance',
+    traditional_significance: 'Common everyday dish that showcases Eritrean skill with vegetables',
+    modern_adaptations: ['Baby spinach version', 'One-pan preparation', 'Meal prep friendly'],
+    pairing_suggestions: ['Injera or taita', 'Rice dishes', 'Grilled fish', 'Traditional bread'],
+    featured: false,
+    rating: 4.4,
+    reviews: 52
+  },
+
+  {
+    id: 'ga-at-porridge',
+    name: 'Ga\'at (Traditional Porridge)',
+    nameAmharic: 'ጋዓት',
+    type: 'traditional',
+    category: 'condiments',
+    difficulty: 'beginner',
+    cookTime: 20,
+    prepTime: 5,
+    servings: 4,
+    description: 'Nutritious traditional porridge made from barley flour, often served for breakfast or as comfort food for all ages.',
+    culturalContext: 'Ga\'at is a cherished comfort food in Eritrean culture, often the first solid food given to babies and a nourishing meal for the sick and elderly.',
+    region: 'Throughout Eritrea',
+    featuredSpices: ['barley-flour', 'honey'],
+    ingredients: [
+      { item: 'Barley flour', amount: '1 cup', notes: 'Finely ground', spiceProduct: 'barley-flour' },
+      { item: 'Water', amount: '3 cups' },
+      { item: 'Clarified butter (tesmi)', amount: '2 tablespoons' },
+      { item: 'Honey', amount: '2-3 tablespoons', notes: 'To taste', spiceProduct: 'honey' },
+      { item: 'Salt', amount: '1/2 teaspoon' },
+      { item: 'Cinnamon', amount: '1/4 teaspoon', notes: 'Optional' }
+    ],
+    instructions: [
+      { step: 1, action: 'Bring water to boil in heavy-bottomed pot.', timeEstimate: '5 min' },
+      { step: 2, action: 'Gradually whisk in barley flour, stirring constantly to prevent lumps.', timeEstimate: '3 min', technique: 'Slow incorporation prevents clumping' },
+      { step: 3, action: 'Reduce heat to low and cook, stirring frequently, until thick and smooth.', timeEstimate: '15 min' },
+      { step: 4, action: 'Stir in tesmi and salt. Cook for 2 more minutes.', timeEstimate: '2 min' },
+      { step: 5, action: 'Remove from heat and let cool slightly.', timeEstimate: '3 min' },
+      { step: 6, action: 'Serve warm drizzled with honey and sprinkled with cinnamon if desired.', tips: 'Adjust honey to taste preference' }
+    ],
+    tips: [
+      'Stir constantly to achieve smooth, lump-free texture',
+      'Consistency should be like thick oatmeal',
+      'Serve immediately while warm',
+      'Traditional tesmi gives authentic flavor'
+    ],
+    variations: [
+      'Sweet ga\'at - Extra honey and spices',
+      'Savory ga\'at - With berbere and vegetables',
+      'Mixed grain - Combining barley with other flours'
+    ],
+    nutritionalBenefits: [
+      'High in fiber and complex carbohydrates',
+      'Good source of protein from barley',
+      'Easily digestible comfort food',
+      'Provides sustained energy'
+    ],
+    images: ['gaat-1.jpg', 'gaat-cooking.jpg'],
+    difficulty_description: 'Simple preparation requiring attention to prevent lumps and achieve proper consistency',
+    traditional_significance: 'Comfort food representing nurturing and care in Eritrean families',
+    modern_adaptations: ['Instant pot method', 'Overnight oats style', 'Protein-enhanced versions'],
+    pairing_suggestions: ['Fresh fruit', 'Nuts and seeds', 'Traditional tea', 'Yogurt'],
+    featured: false,
+    rating: 4.2,
+    reviews: 28
+  },
+
   {
     id: 'injera-bread',
     name: 'Traditional Injera',
@@ -561,6 +799,123 @@ export const recipes: Recipe[] = [
     rating: 4.5,
     reviews: 67
   },
+  
+  {
+    id: 'modern-berbere-salmon',
+    name: 'Berbere-Crusted Salmon',
+    type: 'modern',
+    category: 'meat',
+    difficulty: 'intermediate',
+    cookTime: 15,
+    prepTime: 10,
+    servings: 4,
+    description: 'Contemporary fusion dish featuring fresh salmon with a berbere spice crust, bridging Eritrean flavors with modern cooking techniques.',
+    culturalContext: 'This modern creation represents how Eritrean diaspora communities adapt traditional flavors to local ingredients, creating new culinary traditions.',
+    region: 'Diaspora Innovation',
+    featuredSpices: ['eritrean-berbere', 'korarima'],
+    ingredients: [
+      { item: 'Salmon fillets', amount: '4 pieces (6 oz each)', notes: 'Skin-on, pin bones removed' },
+      { item: 'Eritrean berbere', amount: '3 tablespoons', spiceProduct: 'eritrean-berbere' },
+      { item: 'Korarima', amount: '1/2 teaspoon', notes: 'Freshly ground', spiceProduct: 'korarima' },
+      { item: 'Olive oil', amount: '2 tablespoons' },
+      { item: 'Lemon juice', amount: '2 tablespoons', notes: 'Fresh' },
+      { item: 'Honey', amount: '1 tablespoon' },
+      { item: 'Salt', amount: 'To taste' },
+      { item: 'Fresh herbs', amount: '2 tablespoons', notes: 'Parsley or cilantro, chopped' }
+    ],
+    instructions: [
+      { step: 1, action: 'Preheat oven to 425°F (220°C). Line baking sheet with parchment.', timeEstimate: '5 min' },
+      { step: 2, action: 'Mix berbere, korarima, and salt in small bowl.', timeEstimate: '1 min' },
+      { step: 3, action: 'Pat salmon fillets dry and brush with olive oil.', timeEstimate: '2 min' },
+      { step: 4, action: 'Press berbere mixture onto top and sides of salmon fillets.', timeEstimate: '2 min', technique: 'Creates flavorful crust' },
+      { step: 5, action: 'Place on prepared baking sheet and drizzle with lemon juice.', timeEstimate: '1 min' },
+      { step: 6, action: 'Bake for 12-15 minutes until fish flakes easily and crust is set.', timeEstimate: '15 min' },
+      { step: 7, action: 'Drizzle with honey and garnish with fresh herbs before serving.', timeEstimate: '1 min' }
+    ],
+    tips: [
+      'Don\'t overcook - salmon should be slightly pink in center',
+      'Berbere creates a beautiful crust when properly applied',
+      'Adjust spice level by varying berbere amount',
+      'Pairs excellently with roasted vegetables or rice'
+    ],
+    variations: [
+      'Mild version - Reduce berbere and add sweet paprika',
+      'Grilled version - Cook on grill for smoky flavor',
+      'White fish - Use with cod or halibut instead'
+    ],
+    nutritionalBenefits: [
+      'High in omega-3 fatty acids from salmon',
+      'Lean protein with heart-healthy benefits',
+      'Antioxidants from berbere spices',
+      'Low carbohydrate, keto-friendly option'
+    ],
+    images: ['berbere-salmon-1.jpg', 'salmon-cooking.jpg'],
+    difficulty_description: 'Simple technique but requires timing to avoid overcooking delicate fish',
+    traditional_significance: 'Represents adaptation of traditional flavors to modern ingredients and techniques',
+    modern_adaptations: ['Air fryer method', 'Cedar plank grilling', 'Meal prep portions'],
+    pairing_suggestions: ['Roasted vegetables', 'Quinoa pilaf', 'White wine', 'Citrus salad'],
+    featured: true,
+    rating: 4.6,
+    reviews: 73
+  },
+   {
+    id: 'suwa-barley-beer',
+    name: 'Suwa (Traditional Barley Beer)',
+    nameAmharic: 'ሱዋ',
+    type: 'traditional',
+    category: 'beverages',
+    difficulty: 'advanced',
+    cookTime: 0,
+    prepTime: 45,
+    servings: 10,
+    description: 'Traditional Eritrean fermented barley beverage, lightly alcoholic and refreshing, enjoyed during social gatherings.',
+    culturalContext: 'Suwa is central to Eritrean social culture, traditionally brewed by women and shared during community celebrations and religious festivals.',
+    region: 'Highland Eritrea',
+    featuredSpices: ['barley-flour', 'gesho-hops'],
+    ingredients: [
+      { item: 'Barley flour', amount: '4 cups', notes: 'Finely ground', spiceProduct: 'barley-flour' },
+      { item: 'Gesho (hop substitute)', amount: '1/4 cup', notes: 'Dried and ground', spiceProduct: 'gesho-hops' },
+      { item: 'Water', amount: '12 cups', notes: 'Boiled and cooled' },
+      { item: 'Honey', amount: '1/2 cup', notes: 'Optional for sweetness' },
+      { item: 'Traditional yeast starter', amount: '1/4 cup', notes: 'Or bread yeast' }
+    ],
+    instructions: [
+      { step: 1, action: 'Toast barley flour in dry pan until lightly golden and fragrant.', timeEstimate: '10 min', technique: 'Even toasting for flavor' },
+      { step: 2, action: 'Mix toasted flour with gesho in large ceramic or glass container.', timeEstimate: '5 min' },
+      { step: 3, action: 'Add cooled boiled water gradually, stirring to prevent lumps.', timeEstimate: '10 min' },
+      { step: 4, action: 'Add honey if using and stir until dissolved.', timeEstimate: '2 min' },
+      { step: 5, action: 'Add yeast starter and mix well. Cover with clean cloth.', timeEstimate: '3 min' },
+      { step: 6, action: 'Ferment at room temperature for 3-5 days, stirring daily.', timeEstimate: '3-5 days', technique: 'Traditional wild fermentation' },
+      { step: 7, action: 'Strain through fine cloth when pleasantly tangy and lightly alcoholic.', timeEstimate: '15 min' },
+      { step: 8, action: 'Serve fresh or age for 1-2 additional days for stronger flavor.', tips: 'Best consumed within a week' }
+    ],
+    tips: [
+      'Use non-metal containers for fermentation',
+      'Taste daily to monitor fermentation progress',
+      'Traditional suwa is cloudy and slightly effervescent',
+      'Serve at social gatherings and celebrations'
+    ],
+    variations: [
+      'Sweet suwa - More honey for sweeter taste',
+      'Spiced suwa - Adding korarima or ginger',
+      'Quick suwa - Using commercial yeast for faster fermentation'
+    ],
+    nutritionalBenefits: [
+      'Probiotics from natural fermentation',
+      'B-vitamins from barley and fermentation',
+      'Lower alcohol content than commercial beers',
+      'Traditional source of nutrients and hydration'
+    ],
+    images: ['suwa-1.jpg', 'suwa-fermentation.jpg'],
+    difficulty_description: 'Requires patience for fermentation and experience to judge proper taste development',
+    traditional_significance: 'Essential beverage for Eritrean social gatherings and religious celebrations',
+    modern_adaptations: ['Controlled fermentation methods', 'Bottled aging', 'Commercial yeast versions'],
+    pairing_suggestions: ['Spicy stews', 'Traditional snacks', 'Community celebrations', 'Folk music and dance'],
+    featured: false,
+    rating: 4.3,
+    reviews: 31
+  },
+
   {
     id: 'tej-honey-wine',
     name: 'Traditional Tej (Honey Wine)',

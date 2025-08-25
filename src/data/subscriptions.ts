@@ -39,7 +39,7 @@ export interface MonthlyBox {
 export interface GiftOption {
   id: string;
   name: string;
-  type: 'subscription' | 'one_time' | 'corporate';
+  type: 'subscription' | 'one_time' | 'corporate' | 'ceremony';
   description: string;
   price: number;
   duration?: string;
@@ -49,6 +49,7 @@ export interface GiftOption {
   corporate_features?: string[];
   ideal_for: string[];
   luxury_packaging: boolean;
+  ceremonial_features?: string[];
 }
 
 export const subscriptionTiers: SubscriptionTier[] = [
@@ -86,6 +87,39 @@ export const subscriptionTiers: SubscriptionTier[] = [
     early_access: false
   },
   {
+    id: 'spice-navigator',
+    name: 'Spice Navigator',
+    nameAmharic: 'ቅመማት መራሒ',
+    price: 39,
+    originalPrice: 49,
+    interval: 'monthly',
+    description: 'Perfect introduction to authentic Eritrean flavors from the Red Sea coast to the highlands.',
+    features: [
+      '3-4 traditional Eritrean spices per box',
+      'Recipe cards with coastal and highland dishes',
+      'Monthly newsletter with liberation stories',
+      'Access to online Eritrean recipe library',
+      'Free standard shipping'
+    ],
+    benefits: [
+      'Discover authentic Eritrean flavors monthly',
+      'Learn traditional Habesha cooking methods',
+      'Connect with Eritrean diaspora culture',
+      'Build authentic spice pantry gradually'
+    ],
+    products_per_box: 4,
+    shipping: 'free',
+    exclusive_access: false,
+    badge: 'Popular',
+    badgeColor: 'bg-eritrean-blue',
+    popular: true,
+    luxury_level: 'standard',
+    cultural_content: true,
+    personal_concierge: false,
+    custom_blends: false,
+    early_access: false
+  },
+  {
     id: 'heritage-connoisseur',
     name: 'Heritage Connoisseur',
     nameAmharic: 'ቅርስ ባለዕውቀት',
@@ -108,6 +142,41 @@ export const subscriptionTiers: SubscriptionTier[] = [
       'Priority customer service',
       'Exclusive community access',
       'Professional-grade ingredient quality'
+    ],
+    products_per_box: 7,
+    shipping: 'express',
+    exclusive_access: true,
+    badge: 'Premium',
+    badgeColor: 'bg-golden',
+    luxury_level: 'premium',
+    cultural_content: true,
+    personal_concierge: true,
+    custom_blends: true,
+    early_access: true
+  },
+    {
+    id: 'highland-master',
+    name: 'Highland Master',
+    nameAmharic: 'ደጋዊ ኣቦ ጥበብ',
+    price: 79,
+    originalPrice: 99,
+    interval: 'monthly',
+    description: 'Curated selection of rare highland spices and Red Sea coast specialties for serious Eritrean cuisine enthusiasts.',
+    features: [
+      '6-8 premium highland and coastal spices',
+      'Limited edition seasonal harvests',
+      'Personal Eritrean spice expert access',
+      'Exclusive traditional recipe collection',
+      'Premium Red Sea salt packaging',
+      'Free express shipping',
+      'Early access to new regional products'
+    ],
+    benefits: [
+      'Access to rare highland spices',
+      'Personal consultation with Eritrean experts',
+      'Priority diaspora community service',
+      'Exclusive homeland connection access',
+      'Restaurant-quality ingredient standards'
     ],
     products_per_box: 7,
     shipping: 'express',
@@ -158,6 +227,44 @@ export const subscriptionTiers: SubscriptionTier[] = [
     custom_blends: true,
     early_access: true
   }
+  ,{
+    id: 'independence-legacy',
+    name: 'Independence Legacy',
+    nameAmharic: 'ናጽነት ቅድመት',
+    price: 149,
+    originalPrice: 199,
+    interval: 'monthly',
+    description: 'The ultimate luxury collection celebrating Eritrean independence and culinary sovereignty.',
+    features: [
+      '10-12 ultra-premium spices from all nine ethnic groups',
+      'Hand-selected by master Eritrean culinarians',
+      'Exclusive aged berbere and traditional blends',
+      'Monthly video consultation with homeland chefs',
+      'Custom blend creation honoring family recipes',
+      'Handcrafted Eritrean textile packaging',
+      'White-glove delivery with cultural materials',
+      'Access to traditional coffee ceremony supplies',
+      'Limited artisan collaborations from Asmara'
+    ],
+    benefits: [
+      'Highest quality Eritrean spices available',
+      'Personalized homeland connection service',
+      'Access to pre-release traditional products',
+      'Direct link to Eritrean master artisans',
+      'VIP diaspora community recognition',
+      'Heritage preservation contribution'
+    ],
+    products_per_box: 11,
+    shipping: 'premium',
+    exclusive_access: true,
+    badge: 'Elite',
+    badgeColor: 'bg-eritrean-red',
+    luxury_level: 'elite',
+    cultural_content: true,
+    personal_concierge: true,
+    custom_blends: true,
+    early_access: true
+  }
 ];
 
 export const monthlyBoxes: MonthlyBox[] = [
@@ -175,15 +282,15 @@ export const monthlyBoxes: MonthlyBox[] = [
     preview_available: true
   },
   {
-    id: 'february-2024',
+    id: 'february-2024-eritrea',
     month: 'February',
     year: 2024,
-    theme: 'Love & Warmth',
-    description: 'Romantic spices and warming blends perfect for cold weather and intimate dinners.',
-    featured_products: ['cardamom-love-blend', 'warming-tea-spices', 'romantic-honey'],
-    cultural_focus: 'Traditional courtship customs and wedding feast preparations',
+    theme: 'Red Sea Romance',
+    description: 'Coastal spices and warming blends inspired by Red Sea trading routes and romantic traditions.',
+    featured_products: ['red-sea-salt-blend', 'coastal-cardamom', 'romantic-honey-spice'],
+    cultural_focus: 'Traditional coastal courtship customs and wedding preparations',
     recipes_included: 4,
-    story: 'Discover how Ethiopian families use specific spices in wedding preparations and romantic meals.',
+    story: 'Discover how Eritrean coastal communities use specific spices in wedding celebrations and romantic meals by the Red Sea.',
     estimated_value: 98,
     preview_available: true
   },
@@ -199,6 +306,32 @@ export const monthlyBoxes: MonthlyBox[] = [
     story: 'Experience the traditional spring blessing ceremonies and the spices used to welcome new growth.',
     estimated_value: 110,
     limited_quantity: 500,
+    preview_available: false
+  }, {
+    id: 'april-2024-eritrea',
+    month: 'April',
+    year: 2024,
+    theme: 'Easter Highland Celebration',
+    description: 'Traditional Orthodox Easter spices from the Eritrean highlands for Fasika celebrations.',
+    featured_products: ['fasika-berbere', 'holy-week-incense', 'easter-celebration-blend'],
+    cultural_focus: 'Orthodox Easter traditions and highland monastery customs',
+    recipes_included: 4,
+    story: 'Explore the sacred spices used in Eritrean Orthodox Easter preparations and monastery blessing ceremonies.',
+    estimated_value: 115,
+    preview_available: true
+  },
+  {
+    id: 'may-2024-eritrea',
+    month: 'May',
+    year: 2024,
+    theme: 'Independence Day Glory',
+    description: 'Celebrate Eritrean Independence Day (May 24) with patriotic spice blends and national pride flavors.',
+    featured_products: ['independence-berbere', 'national-pride-blend', 'victory-coffee-spice'],
+    cultural_focus: 'Independence Day celebrations and national unity traditions',
+    recipes_included: 6,
+    story: 'Honor Independence Day with the traditional spices used in national celebrations and freedom festival feasts.',
+    estimated_value: 135,
+    limited_quantity: 300,
     preview_available: false
   }
 ];
@@ -221,6 +354,52 @@ export const giftOptions: GiftOption[] = [
     presentation: 'Handcrafted wooden box with Ethiopian textile lining',
     customization_available: true,
     ideal_for: ['Cooking enthusiasts', 'Cultural explorers', 'Newlyweds', 'College students'],
+    luxury_packaging: true
+  },
+  {
+    id: 'homeland-connection-kit',
+    name: 'Homeland Connection Kit',
+    type: 'one_time',
+    description: 'Perfect introduction to authentic Eritrean cuisine connecting diaspora families to their homeland flavors.',
+    price: 125,
+    includes: [
+      'Traditional Eritrean Berbere (250g)',
+      'Red Sea Salt blend (300g)',
+      'Highland Wild Honey (350g)',
+      'Eritrean recipe collection (50 traditional dishes)',
+      'Cultural heritage guide with nine ethnic groups',
+      'Handwoven storage containers'
+    ],
+    presentation: 'Traditional Eritrean basket with hand-woven textile lining',
+    customization_available: true,
+    ideal_for: ['Diaspora families', 'Cultural preservationists', 'Young Eritreans abroad', 'Heritage learners'],
+    luxury_packaging: true
+  },
+  {
+    id: 'diplomatic-excellence-collection',
+    name: 'Diplomatic Excellence Collection',
+    type: 'corporate',
+    description: 'Prestigious diplomatic gift showcasing Eritrean sovereignty and culinary independence, perfect for international relations.',
+    price: 350,
+    includes: [
+      'Premium Highland Berbere Reserve (200g)',
+      'Eritrean coffee ceremony set (complete)',
+      'Red Sea honey collection (3 coastal varieties)',
+      'Nine ethnic groups spice representation',
+      'Independence history cookbook',
+      'Cultural documentary about Eritrean resilience',
+      'Personalized diplomatic messaging'
+    ],
+    presentation: 'Mahogany box with Eritrean national emblem and independence symbols',
+    customization_available: true,
+    corporate_features: [
+      'Embassy and consulate bulk pricing',
+      'Official diplomatic packaging',
+      'Cultural attaché delivery service',
+      'International relations account management',
+      'Custom diplomatic messaging'
+    ],
+    ideal_for: ['Diplomatic missions', 'International partnerships', 'Embassy gifts', 'Cultural ambassadors'],
     luxury_packaging: true
   },
   {
@@ -248,6 +427,25 @@ export const giftOptions: GiftOption[] = [
       'Custom messaging and cards'
     ],
     ideal_for: ['Corporate gifts', 'International partnerships', 'Executive appreciation', 'Cultural diplomacy'],
+    luxury_packaging: true
+  },
+   {
+    id: 'diaspora-connection-subscription',
+    name: '3-Month Diaspora Connection',
+    type: 'subscription',
+    description: 'Three months of premium homeland spice connection, perfect for maintaining cultural ties across continents.',
+    price: 189,
+    duration: '3 months',
+    includes: [
+      'Monthly Highland Master subscription box',
+      'Personal Eritrean heritage consultant access',
+      'Exclusive homeland recipe collection',
+      'Cultural connection materials',
+      'International premium shipping included'
+    ],
+    presentation: 'Luxury gift certificate with Eritrean flag colors and cultural messaging',
+    customization_available: true,
+    ideal_for: ['Diaspora community', 'Family connections', 'Cultural education', 'Heritage preservation'],
     luxury_packaging: true
   },
   {
@@ -287,6 +485,50 @@ export const giftOptions: GiftOption[] = [
     customization_available: false,
     ideal_for: ['Professional chefs', 'Culinary students', 'Restaurant owners', 'Serious home cooks'],
     luxury_packaging: true
+  }
+  , {
+    id: 'master-habesha-collection',
+    name: 'Master Habesha Collection',
+    type: 'one_time',
+    description: 'Professional-grade Eritrean spice collection honoring traditional Habesha culinary mastery.',
+    price: 275,
+    includes: [
+      'Complete regional berbere set (6 provincial varieties)',
+      'Rare highland spice collection (15 unique spices)',
+      'Traditional grinding stone (mukecha)',
+      'Master chef Eritrean recipe compilation',
+      'Professional spice storage system',
+      'Authenticity certificate from homeland'
+    ],
+    presentation: 'Professional chef-grade case with traditional Eritrean compartment design',
+    customization_available: false,
+    ideal_for: ['Professional Eritrean chefs', 'Culinary heritage students', 'Restaurant authenticity', 'Master home cooks'],
+    luxury_packaging: true
+  },
+  {
+    id: 'wedding-blessing-collection',
+    name: 'Wedding Blessing Collection',
+    type: 'ceremony',
+    description: 'Traditional Eritrean wedding spices and ceremonial blends for authentic cultural celebrations.',
+    price: 200,
+    includes: [
+      'Bridal berbere blessing blend',
+      'Wedding ceremony incense collection',
+      'Traditional honey wine spices',
+      'Seven-day celebration spice set',
+      'Wedding feast recipe guide',
+      'Ceremonial presentation vessels'
+    ],
+    presentation: 'Traditional wedding basket with ceremonial textile wrapping',
+    customization_available: true,
+    ideal_for: ['Eritrean weddings', 'Cultural ceremonies', 'Traditional celebrations', 'Heritage preservation'],
+    luxury_packaging: true,
+    ceremonial_features: [
+      'Traditional blessing ceremony guide',
+      'Seven-day celebration planning',
+      'Cultural wedding consultant access',
+      'Ceremonial vessel rental options'
+    ]
   }
 ];
 

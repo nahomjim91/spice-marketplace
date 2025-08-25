@@ -319,21 +319,24 @@ export default function ProductCatalog({ showHeader = true }: ProductCatalogProp
 
       {/* Category Tabs */}
       <Tabs value={activeCategory} onValueChange={setActiveCategory} className="mb-8">
-        <TabsList className="w-full justify-start overflow-x-auto bg-warm-beige/30">
-          <TabsTrigger value="all" className="data-[state=active]:bg-saffron data-[state=active]:text-white">
-            All Products
-          </TabsTrigger>
-          {productCategories.map((category) => (
-            <TabsTrigger 
-              key={category.id} 
-              value={category.id}
-              className="data-[state=active]:bg-saffron data-[state=active]:text-white whitespace-nowrap"
-            >
-              <span className="mr-2">{category.icon}</span>
-              {category.name}
-            </TabsTrigger>
-          ))}
-        </TabsList>
+    <TabsList className="w-full justify-start overflow-x-auto bg-warm-beige/30 hide-scrollbar">
+  <TabsTrigger 
+    value="all" 
+    className="data-[state=active]:bg-saffron data-[state=active]:!text-burgundy text-charcoal dark:text-ivory whitespace-nowrap"
+  >
+    All Products
+  </TabsTrigger>
+  {productCategories.map((category) => (
+    <TabsTrigger 
+      key={category.id} 
+      value={category.id}
+      className="data-[state=active]:bg-saffron data-[state=active]:!text-burgundy text-charcoal dark:text-ivory whitespace-nowrap"
+    >
+      <span className="mr-2">{category.icon}</span>
+      {category.name}
+    </TabsTrigger>
+  ))}
+</TabsList>
 
         <TabsContent value={activeCategory} className="mt-8">
           {/* Results Count */}

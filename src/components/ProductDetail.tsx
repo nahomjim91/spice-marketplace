@@ -251,33 +251,50 @@ export default function ProductDetail({ product, onBack }: ProductDetailProps) {
           className="mt-16"
         >
           <Tabs defaultValue="story" className="w-full">
-            <TabsList className="grid w-full grid-cols-6 bg-warm-beige/30">
-              <TabsTrigger value="story" className="data-[state=active]:bg-saffron data-[state=active]:text-white">
-                <BookOpen className="w-4 h-4 mr-2" />
-                Story
-              </TabsTrigger>
-              <TabsTrigger value="flavor" className="data-[state=active]:bg-saffron data-[state=active]:text-white">
-                <Coffee className="w-4 h-4 mr-2" />
-                Flavor
-              </TabsTrigger>
-              <TabsTrigger value="origin" className="data-[state=active]:bg-saffron data-[state=active]:text-white">
-                <MapPin className="w-4 h-4 mr-2" />
-                Origin
-              </TabsTrigger>
-              <TabsTrigger value="usage" className="data-[state=active]:bg-saffron data-[state=active]:text-white">
-                <Users className="w-4 h-4 mr-2" />
-                Usage
-              </TabsTrigger>
-              <TabsTrigger value="harvest" className="data-[state=active]:bg-saffron data-[state=active]:text-white">
-                <Calendar className="w-4 h-4 mr-2" />
-                Harvest
-              </TabsTrigger>
-              <TabsTrigger value="care" className="data-[state=active]:bg-saffron data-[state=active]:text-white">
-                <Package className="w-4 h-4 mr-2" />
-                Care
-              </TabsTrigger>
-            </TabsList>
-
+        <TabsList className="grid w-full grid-cols-6 bg-warm-beige/30">
+  <TabsTrigger 
+    value="story" 
+    className="data-[state=active]:bg-saffron data-[state=active]:text-burgundy data-[state=active]:dark:text-white text-charcoal dark:text-ivory"
+  >
+    <BookOpen className="w-4 h-4 mr-2" />
+    Story
+  </TabsTrigger>
+  <TabsTrigger 
+    value="flavor" 
+    className="data-[state=active]:bg-saffron data-[state=active]:text-burgundy data-[state=active]:dark:text-white text-charcoal dark:text-ivory"
+  >
+    <Coffee className="w-4 h-4 mr-2" />
+    Flavor
+  </TabsTrigger>
+  <TabsTrigger 
+    value="origin" 
+    className="data-[state=active]:bg-saffron data-[state=active]:text-burgundy data-[state=active]:dark:text-white text-charcoal dark:text-ivory"
+  >
+    <MapPin className="w-4 h-4 mr-2" />
+    Origin
+  </TabsTrigger>
+  <TabsTrigger 
+    value="usage" 
+    className="data-[state=active]:bg-saffron data-[state=active]:text-burgundy data-[state=active]:dark:text-white text-charcoal dark:text-ivory"
+  >
+    <Users className="w-4 h-4 mr-2" />
+    Usage
+  </TabsTrigger>
+  <TabsTrigger 
+    value="harvest" 
+    className="data-[state=active]:bg-saffron data-[state=active]:text-white text-charcoal dark:text-ivory"
+  >
+    <Calendar className="w-4 h-4 mr-2" />
+    Harvest
+  </TabsTrigger>
+  <TabsTrigger 
+    value="care" 
+    className="data-[state=active]:bg-saffron data-[state=active]:text-white text-charcoal dark:text-ivory"
+  >
+    <Package className="w-4 h-4 mr-2" />
+    Care
+  </TabsTrigger>
+</TabsList>
             {/* Story Tab */}
             <TabsContent value="story" className="mt-8">
               <Card>

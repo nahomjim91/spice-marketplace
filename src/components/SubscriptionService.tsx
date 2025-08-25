@@ -94,21 +94,21 @@ export default function SubscriptionService() {
           <TabsList className="grid w-full grid-cols-3 mb-12 bg-warm-beige/30 h-14">
             <TabsTrigger 
               value="subscriptions" 
-              className="data-[state=active]:bg-saffron data-[state=active]:text-white text-lg py-3"
+                className="data-[state=active]:!bg-gradient-to-r data-[state=active]:!from-saffron data-[state=active]:!to-golden data-[state=active]:!text-burgundy data-[state=active]:!shadow-lg data-[state=active]:!shadow-saffron/25 dark:data-[state=active]:!text-ivory text-lg py-3 text-burgundy/70 dark:text-ivory/70 hover:text-saffron hover:bg-saffron/5 dark:hover:bg-saffron/10 transition-all duration-300 font-medium data-[state=active]:!scale-105 data-[state=active]:!border-golden/50 data-[state=active]:!font-semibold"
             >
               <Crown className="w-5 h-5 mr-2" />
               Subscriptions
             </TabsTrigger>
             <TabsTrigger 
               value="gifts" 
-              className="data-[state=active]:bg-saffron data-[state=active]:text-white text-lg py-3"
+                className="data-[state=active]:!bg-gradient-to-r data-[state=active]:!from-saffron data-[state=active]:!to-golden data-[state=active]:!text-burgundy data-[state=active]:!shadow-lg data-[state=active]:!shadow-saffron/25 dark:data-[state=active]:!text-ivory text-lg py-3 text-burgundy/70 dark:text-ivory/70 hover:text-saffron hover:bg-saffron/5 dark:hover:bg-saffron/10 transition-all duration-300 font-medium data-[state=active]:!scale-105 data-[state=active]:!border-golden/50 data-[state=active]:!font-semibold"
             >
               <Gift className="w-5 h-5 mr-2" />
               Gift Collections
             </TabsTrigger>
             <TabsTrigger 
               value="monthly-boxes" 
-              className="data-[state=active]:bg-saffron data-[state=active]:text-white text-lg py-3"
+                className="data-[state=active]:!bg-gradient-to-r data-[state=active]:!from-saffron data-[state=active]:!to-golden data-[state=active]:!text-burgundy data-[state=active]:!shadow-lg data-[state=active]:!shadow-saffron/25 dark:data-[state=active]:!text-ivory text-lg py-3 text-burgundy/70 dark:text-ivory/70 hover:text-saffron hover:bg-saffron/5 dark:hover:bg-saffron/10 transition-all duration-300 font-medium data-[state=active]:!scale-105 data-[state=active]:!border-golden/50 data-[state=active]:!font-semibold"
             >
               <Calendar className="w-5 h-5 mr-2" />
               Monthly Boxes

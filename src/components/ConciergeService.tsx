@@ -736,7 +736,7 @@ export default function ConciergeService() {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-2 border-white text-white hover:bg-white hover:text-charcoal px-8 py-4 text-lg font-medium"
+                className="border-2 border-ivory text-ivory hover:bg-ivory hover:text-charcoal px-8 py-4 text-lg font-medium transition-colors"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Concierge Now
