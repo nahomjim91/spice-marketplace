@@ -10,11 +10,14 @@ import GiftsPage from '@/pages/GiftsPage';
 import ConciergePage from '@/pages/ConciergePage';
 import CheckoutPage from '@/pages/CheckoutPage';
 import DashboardPage from '@/pages/DashboardPage';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   return (
     <Router>
       <div className="min-h-screen bg-background">
+              <ScrollToTop />
+
         <Navigation />
         <div className='pt-16'></div>
         
